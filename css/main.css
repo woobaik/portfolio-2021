@@ -27,10 +27,18 @@ a {
 .global-nav {
   height: 44px;
   padding: 0 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .local-nav {
   height: 52px;
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  left: 0;
   border-bottom: 1px solid #ddd;
   padding: 0 1rem;
 }
@@ -61,6 +69,7 @@ a {
 
 .scroll-section {
   padding-top: 50vh;
+  border: 1px solid green;
 }
 
 #scroll-section-0 h1 {
@@ -76,6 +85,7 @@ a {
   font-size: 2rem;
   margin: 5px 0;
   text-align: center;
+  font-weight: bold;
 }
 
 .main-message small {
@@ -88,6 +98,8 @@ a {
   font-size: 1.2rem;
   color: #888;
   padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Joungwoo */
@@ -109,6 +121,8 @@ a {
 }
 
 .mid-message {
+  max-width: 1000px;
+  margin: 0 auto;
   font-size: 2rem;
   color: #888;
   padding: 0 1rem;
@@ -122,6 +136,8 @@ a {
   padding: 0 1rem;
   font-size: 1.2rem;
   color: #888;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .footer {
@@ -130,6 +146,22 @@ a {
   justify-content: center;
   height: 7rem;
   background-color: white;
+}
+
+.sticky-elem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+/* show only what we need to see */
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block;
 }
 
 @media (min-width: 1024px) {
@@ -158,5 +190,13 @@ a {
 
   .desc-message {
     width: 20%;
+  }
+
+  .mid-message {
+    font-size: 4vw;
+  }
+
+  .canvas-caption {
+    font-size: 2rem;
   }
 }
