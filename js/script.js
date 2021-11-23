@@ -59,6 +59,9 @@
     }
 
     if (yOffSet < prevScrollHeight) {
+      if (currentScene === 0) {
+        return;
+      }
       currentScene -= 1;
     }
 
